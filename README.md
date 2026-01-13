@@ -8,14 +8,9 @@
 
 ## 📖 Overview
 
-Spatial transcriptomics enables the measurement of gene expression with spatial context. ARAE improves the accuracy of spatial domain identification by:
+We propose the Adaptive ReAdjust Edge-weight (ARAE) framework, a graph neural network method for spatial domain recognition. By incorporating an adaptive edge adjustment module, the similarity between embedding representations is used to distinguish propagated neighbor information, thereby redistributing edge weights to obtain more refined representations. Additionally, we introduce a deconvolution module for low-resolution data to enhance the model's accuracy in region recognition. Finally, we integrate a graph convolutional network that incorporates comprehensive neighborhood information. 
 
-1.  **Adaptive Edge Adjustment**: Dynamically redistributing edge weights based on embedding similarity to distinguish neighbor information.
-2.  **Deconvolution Module**: specifically improving resolution and accuracy for low-resolution datasets.
-3.  **Graph Convolutional Network (GCN)**: Integrating neighborhood information for robust spatial embedding.
-
-<!-- 如果你有模型架构图，请把图片放在项目中并替换下面的路径 -->
-<!-- ![Model Architecture](images/framework.png) -->
+![Figure1](https://github.com/user-attachments/assets/50df60d0-0def-42df-a881-ed3b4bcbf42a)
 
 ---
 
