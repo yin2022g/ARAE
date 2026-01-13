@@ -90,9 +90,9 @@ If you use this code for your research, please cite our paper:
 
 ```bibtex
 @article{ARAE2025,
-  title={ARAE: Adaptive ReAdjust Edge-weight framework for spatial domain recognition},
-  author={Yin, G. and Authors},
-  journal={Journal Name},
+  title={Unveiling the Tumor Invasion Front Microenvironment and Mechanisms via Spatial Boundary Detection},
+  author={xxx},
+  journal={xxx},
   year={2025}
 }
 ```
