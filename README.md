@@ -4,7 +4,7 @@
 [![Framework](https://img.shields.io/badge/Framework-PyTorch-orange)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-**ARAE** is a Graph Neural Network (GNN) framework designed for **spatial domain recognition** in spatial transcriptomics data. It enhances domain identification through an adaptive edge-weight adjustment mechanism and a specialized deconvolution module for low-resolution data.
+**ARAE** is a dynamic GCN-based spatial transcriptomic clustering framework that excels in dentifying invasion fronts amid varying spatial domain sizes and ambiguous tissue boundaries. Beyond leveraging GCNs to learn low-dimensional embeddings, ARAE dynamically adjusts graph topology to mitigate heterophily during layer-wise learning. This adaptation enhances the partitioning of heterogeneous spatial domains and enables precise boundary identification.
 
 ## 📖 Overview
 
@@ -13,7 +13,6 @@ We propose the Adaptive ReAdjust Edge-weight (ARAE) framework, a graph neural ne
 ![Figure1](https://github.com/user-attachments/assets/50df60d0-0def-42df-a881-ed3b4bcbf42a)
 
 ---
-
 ## 🛠️ Installation
 
 ### 1. Clone the repository
@@ -29,7 +28,6 @@ pip install -r requirements.txt
 ```
 
 ---
-
 ## 📂 Data Preparation
 
 The model has been validated on multiple public datasets. Please download the data and organize it into the `data/` folder.
@@ -46,16 +44,14 @@ The model has been validated on multiple public datasets. Please download the da
 
 ## 🚀 Usage
 
-### 1. Data Preprocessing
-Process the raw data into the required format:
+### 1. Low Resolution
 ```bash
-python preprocess.py
+python low_resolution/main.py
 ```
 
-### 2. Training and Evaluation
-Run the main script to train the model and generate plots:
+### 2. High Resolution
 ```bash
-python test_find_best_plot.py
+python high_resolution/main.py
 ```
 
 *Note: You may need to adjust parameters inside `config/` or pass arguments depending on your specific setup.*
