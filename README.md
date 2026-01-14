@@ -44,12 +44,12 @@ The model has been validated on multiple public datasets. Please download the da
 
 ## 🚀 Usage
 
-### 1. Low Resolution
+### 1. Low Resolution (e.g., DLPFC)
 ```bash
 python low_resolution/main.py
 ```
 
-### 2. High Resolution
+### 2. High Resolution (e.g., Stereo-seq_MoB)
 ```bash
 python high_resolution/main.py
 ```
@@ -60,17 +60,20 @@ python high_resolution/main.py
 
 ## 📂 Project Structure
 
+The repository is organized by resolution capability. The core model files (`models.py`, `layers.py`, etc.) are located within their respective directories.
+
 ```text
 ARAE/
-├── config/                  # Configuration parameters
-├── data/                    # Dataset storage
-├── layers.py                # Neural network layers (GCN, etc.)
-├── models.py                # Main ARAE model definition
-├── preprocess.py            # Data preprocessing scripts
-├── test_find_best_plot.py   # Training and testing entry point
-├── utils.py                 # Helper functions
-├── requirements.txt         # Python dependencies
-└── README.md                # Project documentation
+├── config/                 # Configuration files for model parameters
+├── data/                   # Directory for storing datasets (e.g., data/151675/)
+├── high_resolution/        # Implementation for high-res data (e.g., Stereo-seq, Slide-seq)
+│   ├── main.py             # Entry point for high-resolution analysis
+│   └── ...                 # Core modules (models, utils) for high-res
+├── low_resolution/         # Implementation for low-res data (e.g., Visium)
+│   ├── main.py             # Entry point for low-resolution analysis
+│   └── ...                 # Core modules (models, utils) for low-res
+├── requirements.txt        # Python dependency list
+└── README.md               # Project documentation
 ```
 
 ---
